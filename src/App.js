@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="w-screen h-screen p-10 bg-gray-100 text-slate-700">
+      {/* <!-- header --> */}
+      <h1 class="max-w-md mx-auto text-center text-2xl font-bold">
+        Simple Counter Application
+      </h1>
+
+      {/* <!-- counters --> */}
+      <div class="max-w-md mx-auto mt-10 space-y-5" id="counterContainer">
+       <Counter />
+
+      </div>
+      <div class="max-w-md mx-auto mt-10 space-y-5" id="counterContainer">
+        <button class="bg-indigo-400 text-white px-3 py-2 rounded shadow" id="addCounter">
+          Add Counter
+        </button>
+        <button class="bg-red-400 text-white px-3 py-2 rounded shadow mx-2" id="resteCounter">
+          Reset Counter
+        </button>
+
+      </div>
+
     </div>
   );
 }
